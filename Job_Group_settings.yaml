@@ -7,25 +7,4 @@ products:
     distri: opensuse
     flavor: DVD
     version: '15.2'
-  opensuse-Leap-15.3-DVD-x86_64:
-    distri: opensuse
-    flavor: DVD
-    version: '15.3'
-  opensuse-15.3-container-test-x86_64:
-    distri: opensuse
-    flavor: container-test
-    version: '15.3'
-  opensuse-Leap15.3-JeOS-for-kvm-and-xen-x86_64:
-    distri: opensuse
-    flavor: JeOS-for-kvm-and-xen
-    version: '15.3'
-scenarios:
-  x86_64:
-    opensuse-15.3-container-test-x86_64:
-      - containers_on_centos_host_x86_64
-      - containers_on_ubuntu_host_x86_64
-    opensuse-Leap-15.3-DVD-x86_64:
-      - iscsi_client_normal_auth_backstore_hdd
-      - iscsi_server_normal_auth_backstore_hdd
-    opensuse-Leap15.3-JeOS-for-kvm-and-xen-x86_64:
-      - jeos-fips
+scenarios: {}
