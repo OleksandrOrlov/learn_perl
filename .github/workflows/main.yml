@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: My job step
         id: hello
-        uses: OleksandrOrlov/learn_perl
+        uses: OleksandrOrlov/learn_perl@master
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
