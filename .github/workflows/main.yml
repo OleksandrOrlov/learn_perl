@@ -14,5 +14,6 @@ jobs:
           API_SECRET: ${{ secrets.API_SECRET }}
           PATH_TO_FILE: ./Job_Group_settings.yaml
         run: |
+          pwd
           openqa-cli api --host http://openqa.opensuse.org --apikey=$API_KEY --apisecret=$API_SECRET jobs/1959258
           openqa-cli api -X POST --o3 --apikey=$API_KEY --apisecret=$API_SECRET job_templates_scheduling/74 schema=JobTemplates-01.yaml schema=JobTemplates-01.yaml preview=0 --param-file template=$PATH_TO_FILE
