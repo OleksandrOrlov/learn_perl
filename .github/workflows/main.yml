@@ -8,4 +8,8 @@ jobs:
       image: registry.opensuse.org/home/oorlov/containers/containers/tumbleweed:openqa-tests-ci
     steps:
       - name: Get job status
+        shell: bash
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          API_SECRET: ${{ secrets.API_SECRET }}
         run: openqa-cli api --host http://openqa.opensuse.org --apikey=$API_KEY --apisecret=$API_SECRET jobs/1959258
