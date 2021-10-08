@@ -12,4 +12,6 @@ jobs:
         env:
           API_KEY: ${{ secrets.API_KEY }}
           API_SECRET: ${{ secrets.API_SECRET }}
-        run: openqa-cli api --host http://openqa.opensuse.org --apikey=$API_KEY --apisecret=$API_SECRET jobs/1959258
+        run: |
+          openqa-cli api --host http://openqa.opensuse.org --apikey=$API_KEY --apisecret=$API_SECRET jobs/1959258
+          openqa-client --host http://openqa.opensuse.org --apikey=$API_KEY --apisecret=$API_SECRET job_templates_scheduling/74 -X post --form schema=JobTemplates-01.yaml preview=0 template="$(cat $yaml_file)"
