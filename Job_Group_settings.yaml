@@ -1,0 +1,13 @@
+defaults:
+  x86_64:
+    machine: 64bit
+    priority: 60
+products:
+  opensuse-15.3-container-test-x86_64:
+    distri: opensuse
+    flavor: container-test
+    version: '15.3'
+scenarios:
+  x86_64:
+    opensuse-15.3-container-test-x86_64:
+      - containers_on_centos_host_x86_64
