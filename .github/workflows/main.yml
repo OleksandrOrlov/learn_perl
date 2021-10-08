@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: My job
     container:
-      image: opensuse/leap:15.2
+      image: opensuse/leap:15.3
     steps:
       - uses: actions/checkout@v2
       - name: Deploy Job Group settings
