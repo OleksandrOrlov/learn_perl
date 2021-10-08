@@ -7,6 +7,7 @@ jobs:
     container:
       image: registry.opensuse.org/home/oorlov/containers/containers/tumbleweed:openqa-tests-ci
     steps:
+      - uses: actions/checkout@v2
       - name: Deploy Job Group settings
         shell: bash
         env:
@@ -14,5 +15,4 @@ jobs:
           API_SECRET: ${{ secrets.API_SECRET }}
           URL_TEST_REPO: https://github.com/OleksandrOrlov/learn_perl.git
         run: |
-          git clone --depth 1 $URL_TEST_REPO
           openqa-cli api -X POST --o3 --apikey=$API_KEY --apisecret=$API_SECRET job_templates_scheduling/74 schema=JobTemplates-01.yaml schema=JobTemplates-01.yaml preview=0 --param-file template=Job_Group_settings.yaml
