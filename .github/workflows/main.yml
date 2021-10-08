@@ -7,7 +7,6 @@ jobs:
     container:
       image: registry.opensuse.org/home/oorlov/containers/containers/tumbleweed:openqa-tests-ci
     steps:
-      - uses: actions/checkout@v2
       - name: Deploy Job Group settings
         shell: bash
         env:
