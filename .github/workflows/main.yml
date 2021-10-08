@@ -16,4 +16,3 @@ jobs:
           yaml_file: Job_Group_settings.yaml
         run: |
           - openqa-cli api $OPENQA_CLIENT_PARAMS jobs/1959258
-          - openqa-client $OPENQA_CLIENT_PARAMS job_templates_scheduling/74 post --form schema=JobTemplates-01.yaml preview=0 template="$(cat $yaml_file)"
